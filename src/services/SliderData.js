@@ -13,7 +13,7 @@ export const slideDataOne = [
         path: '/product'
     },
     {
-        title: 'Luxury Villa in Bali, Indonesia',
+        title: '7777 Villa in Bali, Indonesia',
         price: '$10.00',
         label: 'View Product',
         image: ImageTwo,
@@ -21,7 +21,7 @@ export const slideDataOne = [
         path: '/product'
     },  
     {
-        title: 'Luxury Villa in Bali, Indonesia',
+        title: '8888 Villa in Bali, Indonesia',
         price: '$15.00',
         label: 'View Product',
         image: ImageThree,

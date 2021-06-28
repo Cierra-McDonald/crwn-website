@@ -52,7 +52,8 @@ export const HeroSlider = styled.div`
         background: linear-gradient(0deg,
              rgba(0,0,0,0.2) 0%,
              rgba(0,0,0,0.2) 50%,
-             rgba(0,0,0,0.6) 100%,)
+             rgba(0,0,0,0.6) 100%
+             );
 
     }
 `;
@@ -63,11 +64,10 @@ export const HeroImage = styled.img`
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     object-fit: cover;
-
-
 `;
+
 export const HeroContent = styled.div`
     position: relative;
     z-index: 10;
@@ -81,14 +81,14 @@ export const HeroContent = styled.div`
         font-size: clamp(1rem, 8vw, 2rem);
         font-weight: 400;
         text-transform: uppercase;
-        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
         text-align: left;
         margin-bottom: 0.8rem;
     }
 
     p {
         margin-bottom: 1.2rem;        
-        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 
 
     }
@@ -96,6 +96,16 @@ export const HeroContent = styled.div`
 
 
 export const Arrow = styled(IoMdArrowRoundForward)`
+    margin-left: 0.5rem;
+`;
+
+export const SliderButtons = styled.div`
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    z-index: 10;
+
 `;
 
 const arrowButtons = css`
@@ -103,7 +113,7 @@ const arrowButtons = css`
     height: 50px;
     color: #fff;
     cursor: pointer;
-    background: black;
+    background: palevioletred;
     border-radius: 50px;
     padding: 10px;
     margin-right: 1rem;
@@ -113,6 +123,7 @@ const arrowButtons = css`
     &:hover { 
         background: #cd853f;
         transform: scale(1.05);
+        cursor: pointer;
     }
 
 `;
@@ -123,15 +134,6 @@ export const PrevArrow = styled(IoArrowBack)`
 
 export const NextArrow = styled(IoArrowForward)`
     ${arrowButtons}
-`;
-
-export const SliderButtons = styled.div`
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    display: flex;
-    z-index: 10px;
-
 `;
 
 
