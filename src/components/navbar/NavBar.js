@@ -2,12 +2,12 @@ import React from 'react'
 import { Nav, Logo, MenuBars, NavMenu, NavMenuLinks, Button, NavBtn} from './NavBarElements'
 import { menuData } from '../../services/MenuData'
 
-const NavBar = () => {
+const NavBar = ({toggle}) => {
     return (
         <div>
             <Nav>
                 <Logo to='/'>CRWN</Logo>
-                <MenuBars/>
+                <MenuBars onClick={toggle}/>
                 <NavMenu>
                     {menuData.map((title, index) => (
                         <NavMenuLinks to= {title.link} key={index}>

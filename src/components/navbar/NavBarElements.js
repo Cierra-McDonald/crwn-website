@@ -4,7 +4,6 @@ import { FaBars } from "react-icons/fa";
 
 
 
-
 export const Nav = styled.nav`
     height: 60px;
     display: flex;
@@ -39,11 +38,13 @@ export const MenuBars = styled(FaBars)`
     
     @media screen and (max-width: 768px) { 
         display: block;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-50%, 25%);
+        transform: translate(-50%, 40%);
     }
     `;
 
@@ -53,7 +54,7 @@ export const NavMenu = styled.div`
     margin-right: -48px;
 
     @media screen and (max-width: 768px) { 
-        display: none:
+        display: none;
     }
 `;
 
@@ -91,6 +92,6 @@ export const NavBtn = styled.div`
     margin-right: 24px;   
     
     @media screen and (max-width: 768px) { 
-        display: none:
+        display: none;
     }
 `;
