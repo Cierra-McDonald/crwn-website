@@ -6,7 +6,8 @@ import { slideDataOne } from './services/SliderData'
 import Dropdown from './components/dropdown/Dropdown'
 import InfoSection from './components/infosection/InfoSection'
 import { InfoData } from './services/InfoData';
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import FooterContainer from './components/footer/FooterContainer'
 
 function App() {
   const[ isOpen, setIsOpen ] = useState(false);
@@ -25,6 +26,7 @@ function App() {
         <Hero
         slides={slideDataOne}/>
         <InfoSection {...InfoData}/>
+        <FooterContainer/>
     </>
   );
 }
