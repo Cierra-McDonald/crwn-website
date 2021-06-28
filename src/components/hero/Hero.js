@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { Button } from '../navbar/NavBarElements'
 import { 
     HeroSection,
     HeroWrapper,
@@ -7,8 +8,10 @@ import {
     HeroSlide, 
     HeroSlider, 
     Arrow,
-PrevArrow, NextArrow, SliderButtons } from './HeroElements';
-import { Button } from '../navbar/NavBarElements'
+    PrevArrow,
+    NextArrow, 
+    SliderButtons 
+} from './HeroElements';
 //rafce create a functional component for you!
 
 
@@ -17,10 +20,9 @@ const Hero = ({ slides }) => {
 
     const[current, setCurrent] = useState(0);
     const length = slides.length;
-    // const timeout = useRef(null);
+    const timeout = useRef(null);
 
     const nextSlide = () => { 
-        console.log('holla')
         setCurrent(current === length - 1 ? 0 : current + 1)
         console.log(current);
     }
@@ -29,6 +31,10 @@ const Hero = ({ slides }) => {
         setCurrent(current === 0 ? length - 1 : current - 1)
         console.log(current);
     }
+    //if there is no data in the slides props... don't do anything
+    if(!Array.isArray(slides) || slides.length <= 0) {
+        return null;
+    }
 
     return (
         <HeroSection>
@@ -36,19 +42,20 @@ const Hero = ({ slides }) => {
                 {slides.map((slide, index) => {
                     return(
                         <HeroSlide key={index}>
-                            <HeroSlider>
-                                <HeroImage src={slide.image} alt={slide.alt}/>
-                                <HeroContent>
-                                   <h1>{slide.title}</h1>
-                                   <p>{slide.price}</p> 
-                                   <Button to={slide.path} primary="true"
-                                    css={`max-width: 160px`}>
-                                       {slide.label}
-                                       <Arrow/>
-                                   </Button>
-                                </HeroContent>
-                            </HeroSlider>
-                            
+                            { index === current && (
+                                <HeroSlider>
+                                    <HeroImage src={slide.image} alt={slide.alt}/>
+                                    <HeroContent>
+                                    <h1>{slide.title}</h1>
+                                    <p>{slide.price}</p> 
+                                    <Button to={slide.path} primary="true"
+                                        css={`max-width: 160px`}>
+                                        {slide.label}
+                                        <Arrow/>
+                                    </Button>
+                                    </HeroContent>
+                                </HeroSlider>
+                            )} 
                         </HeroSlide>
                     );
                 })}

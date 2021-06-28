@@ -24,9 +24,7 @@ export const HeroSlide = styled.div`
     z-index: 1;
     width: 100%;
     height: 100%;
-
 `;
-
 
 
 export const HeroSlider = styled.div`
@@ -54,8 +52,7 @@ export const HeroSlider = styled.div`
              rgba(0,0,0,0.2) 50%,
              rgba(0,0,0,0.6) 100%
              );
-
-    }
+        }
 `;
 
 
@@ -64,7 +61,7 @@ export const HeroImage = styled.img`
     top: 0;
     left: 0;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     object-fit: cover;
 `;
 
@@ -89,8 +86,6 @@ export const HeroContent = styled.div`
     p {
         margin-bottom: 1.2rem;        
         text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-
-
     }
     `;
 
@@ -113,7 +108,7 @@ const arrowButtons = css`
     height: 50px;
     color: #fff;
     cursor: pointer;
-    background: palevioletred;
+    background: #000d1a;
     border-radius: 50px;
     padding: 10px;
     margin-right: 1rem;
