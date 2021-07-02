@@ -22,20 +22,20 @@ const Hero = ({ slides }) => {
     const length = slides.length;
     const timeout = useRef(null);
 
-    useEffect(() => { 
-        const nextSlide = () => { 
-            setCurrent(current => (current === length - 1 ? 0 : current + 1));
-        }
-        timeout.current = setTimeout(nextSlide, 4000)
+    // useEffect(() => { 
+    //     const nextSlide = () => { 
+    //         setCurrent(current => (current === length - 1 ? 0 : current + 1));
+    //     }
+    //     timeout.current = setTimeout(nextSlide, 4000)
 
-        return function() { 
-            if (timeout.current) { 
-                clearTimeout(timeout.current)
-            }
-        };
+    //     return function() { 
+    //         if (timeout.current) { 
+    //             clearTimeout(timeout.current)
+    //         }
+    //     };
 
-    }, [current, length]
-    );
+    // }, [current, length]
+    // );
 
     const nextSlide = () => { 
         if (timeout.current) { 
@@ -70,7 +70,8 @@ const Hero = ({ slides }) => {
                                     <h1>{slide.title}</h1>
                                     <p>{slide.price}</p> 
                                     <Button to={slide.path} primary="true"
-                                        css={`max-width: 160px`}>
+                                        css={`max-width: 160px`}
+                                        onClick={console.log('in the on!')}>
                                         {slide.label}
                                         <Arrow/>
                                     </Button>

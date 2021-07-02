@@ -1,6 +1,5 @@
 import React from 'react'
 import Footer from './Footer'
-
 import { FiTwitter, FiInstagram, FiGithub} from 'react-icons/fi'
 import {AiOutlineLinkedin} from 'react-icons/ai'
 
