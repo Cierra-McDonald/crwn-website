@@ -1,14 +1,22 @@
 import React from 'react'
-import { Header, Image, ProductWrapper } from './ProductElements'
-import ImageEight from '../../images/ImageEight.jpg'
+import { Header, ProductWrapper } from './ProductElements'
+import Product from './Product'
+import { getProducts } from '../../services/apiUtils'
 
 const ProductsPage = () => {
-    return (
+
+        let products = getProducts();
+
+        return ( 
         <ProductWrapper>
-            <Header>Product page!</Header>
-            <Image src={ImageEight}/>
+           <Header>Product page!</Header>
+            {products.map(product => (<li key={product.name}>
+            <Product product={product}/>
+             </li>))}
         </ProductWrapper>
-    )
-}
+        
+        )
+    };
+
 
 export default ProductsPage

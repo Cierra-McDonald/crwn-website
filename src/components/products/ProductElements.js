@@ -18,6 +18,13 @@ export const Header = styled.h1`
 export const Image = styled.img`
     width: 400px;
 
+`;
 
+export const ProductDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
 `;
