@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import About from './components/about/About'
 import ProductsPage from './components/products/ProductsPage';
 import HomePage from '../src/pages/HomePage'
+import Contact from './components/contact/Contact'
 
 function App() {
   const[ isOpen, setIsOpen ] = useState(false);
@@ -40,6 +41,11 @@ function App() {
                 path="/about"
                 exact
                 component={About}
+                />
+              <Route
+                path="/contact"
+                exact
+                component={Contact}
                 />
             </Switch>
         </Router>
