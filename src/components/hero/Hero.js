@@ -17,7 +17,7 @@ import {
 
 
 const Hero = ({ slides }) => {
-    let history = useHistory();
+    // let history = useHistory();
 
     const[current, setCurrent] = useState(0);
     const length = slides.length;

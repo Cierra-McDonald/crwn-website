@@ -1,8 +1,6 @@
 import ImageOne from '../images/ImageOne.jpg'
 import ImageTwo from '../images/ImageTwo.jpg'
-import ImageThree from '../images/ImageThree.jpg'
 import ImageFour from '../images/ImageFour.jpg'
-import ImageSeven from '../images/ImageSeven.jpg'
 import ImageEight from '../images/ImageEight.jpg'
 
 export const slideDataOne = [
