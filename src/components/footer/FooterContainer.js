@@ -30,9 +30,9 @@ const FooterContainer = () => {
                <Footer.Column>
                    <Footer.Title>Social</Footer.Title>
                    <Footer.Link href="#"><FiInstagram/> Instagram</Footer.Link>
-                   <Footer.Link href='https://twitter.com/cierralaurenn'><FiTwitter/>  Twitter</Footer.Link>
-                   <Footer.Link href='https://github.com/Cierra-McDonald'><FiGithub/>  Github</Footer.Link>
-                   <Footer.Link href='https://www.linkedin.com/in/cierra-mcdonald/'><AiOutlineLinkedin/>  LinkedIn</Footer.Link>
+                   <Footer.Link as="a" target="_blank" href='https://twitter.com/cierralaurenn'><FiTwitter/>  Twitter</Footer.Link>
+                   <Footer.Link as="a" target="_blank" href='https://github.com/Cierra-McDonald'><FiGithub/>  Github</Footer.Link>
+                   <Footer.Link as="a" target="_blank" href='https://www.linkedin.com/in/cierra-mcdonald/'><AiOutlineLinkedin/>  LinkedIn</Footer.Link>
                </Footer.Column>
                </Footer.Row>
            </Footer.Wrapper> 

@@ -1,6 +1,7 @@
 //rafce create a functional component for you!
 import React, { useState, useRef, useEffect } from 'react'
-import { Button } from '../navbar/NavBarElements'
+import { useHistory } from 'react-router-dom';
+// import { Button } from '../navbar/NavBarElements'
 import { 
     HeroSection,
     HeroWrapper,
@@ -8,7 +9,6 @@ import {
     HeroImage, 
     HeroSlide, 
     HeroSlider, 
-    Arrow,
     PrevArrow,
     NextArrow, 
     SliderButtons 
@@ -17,25 +17,30 @@ import {
 
 
 const Hero = ({ slides }) => {
+    let history = useHistory();
 
     const[current, setCurrent] = useState(0);
     const length = slides.length;
     const timeout = useRef(null);
 
-    // useEffect(() => { 
-    //     const nextSlide = () => { 
-    //         setCurrent(current => (current === length - 1 ? 0 : current + 1));
-    //     }
-    //     timeout.current = setTimeout(nextSlide, 4000)
+    useEffect(() => { 
+        const nextSlide = () => { 
+            setCurrent(current => (current === length - 1 ? 0 : current + 1));
+        }
+        timeout.current = setTimeout(nextSlide, 4000)
 
-    //     return function() { 
-    //         if (timeout.current) { 
-    //             clearTimeout(timeout.current)
-    //         }
-    //     };
+        return function() { 
+            if (timeout.current) { 
+                clearTimeout(timeout.current)
+            }
+        };
 
-    // }, [current, length]
-    // );
+    }, [current, length]
+    );
+
+    // const handleClick = () => { 
+    //     history.push('/product')
+    // }
 
     const nextSlide = () => { 
         if (timeout.current) { 
@@ -69,12 +74,13 @@ const Hero = ({ slides }) => {
                                     <HeroContent>
                                     <h1>{slide.title}</h1>
                                     <p>{slide.price}</p> 
-                                    <Button to={slide.path} primary="true"
+                                    {/* <Button href={slide.path} primary="true"
+                                        as="a"
                                         css={`max-width: 160px`}
-                                        onClick={console.log('in the on!')}>
+                                        onClick={handleClick}>
                                         {slide.label}
                                         <Arrow/>
-                                    </Button>
+                                    </Button> */}
                                     </HeroContent>
                                 </HeroSlider>
                             )} 

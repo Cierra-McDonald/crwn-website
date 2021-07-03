@@ -21,13 +21,13 @@ const Dropdown = ({ isOpen, toggle }) => {
             <DropdownWrapper>
                 <DropDownMenu>
                     {menuData.map((item, index) => (
-                        <DropdownLink to={item.link} key={index}>
+                        <DropdownLink as="a" href={item.link} key={index}>
                             {item.title}
                         </DropdownLink>
                     ))}
                 </DropDownMenu>
                 <BtnWrap>
-                    <Button primary='true' round='true' big='true' to='/contact'>
+                    <Button primary='true' round='true' big='true' as="a" href='/contact'>
                         Contact Us
                     </Button>
                 </BtnWrap>

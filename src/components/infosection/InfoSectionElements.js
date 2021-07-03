@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {  IoMdArrowRoundForward } from 'react-icons/io'
 
 export const Section = styled.section`
     width: 100%;
@@ -17,6 +18,9 @@ export const Container = styled.div`
     }
 `;
 
+export const Arrow = styled(IoMdArrowRoundForward)`
+    margin-left: 0.5rem;
+`;
 
 export const ColumnLeft = styled.div`
     display: flex;

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router-dom';
 import { Button } from '../navbar/NavBarElements';
-import { Container, Section, ColumnLeft, ColumnRight } from './InfoSectionElements'
+import { Container, Section, ColumnLeft, ColumnRight, Arrow } from './InfoSectionElements'
 
 const InfoSection = ({ heading, paragraphOne, paragraphTwo, buttonLabel, reverse, image}) => {
     let history = useHistory();
@@ -19,7 +19,7 @@ const InfoSection = ({ heading, paragraphOne, paragraphTwo, buttonLabel, reverse
                     <h1>{heading}</h1>
                     <p>{paragraphOne}</p>
                     <p>{paragraphTwo}</p>
-                    <Button to='/products' primary="true" onClick={handleClick}>{buttonLabel}</Button>
+                    <Button to='/products' primary="true" onClick={handleClick}>{buttonLabel} <Arrow/></Button>
                   </ColumnLeft>
                   <ColumnRight reverse={reverse}>
                   <img src={image} alt="product"/>

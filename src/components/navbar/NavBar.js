@@ -7,7 +7,6 @@ const NavBar = ({toggle}) => {
     let history = useHistory();
 
     const handleContact = () => { 
-        console.log('hello!')
         history.push('/contact')
     }
 
